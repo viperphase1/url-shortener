@@ -1,4 +1,4 @@
-// asynchronous version of string replace so we can look for hashes in the db in parallel
+// asynchronous version of string replace so we can look for records in the db in parallel
 export async function replaceAsync(str: string, regex: RegExp, asyncFn: Function) {
     const promises: any = [];
     str.replace(regex, (match, ...args) => {
